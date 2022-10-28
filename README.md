@@ -1,1 +1,58 @@
 # OpenRR Apps UFACTORY Lite 6
+
+![urdf-viz](./doc/urdf_viz.png)
+
+## Installation
+
+### Install `urdf-viz`
+
+```bash
+cargo install urdf-viz
+```
+
+### Install `openrr-apps`
+
+```bash
+cargo install --git https://github.com/openrr/openrr.git
+```
+
+## urdf-viz
+
+Simulate on `urdf-viz`.
+
+### openrr_apps_joint_position_sender
+
+```bash
+urdf-viz ./urdf/lite6_robot/urdf &
+```
+
+```bash
+openrr_apps_joint_position_sender --config-path ./config/robot_client_config_for_urdf_viz.toml
+```
+
+### openrr_apps_robot_teleop
+
+```bash
+urdf-viz ./urdf/lite6_robot/urdf &
+```
+
+```bash
+openrr_apps_robot_teleop --config-path ./config/teleop_config_for_urdf_viz.toml
+```
+
+## ROS
+
+Run a real robot in `ROS`.
+
+### See also
+
+- [xarm_ros](https://github.com/xArm-Developer/xarm_ros)
+- [xarm_ros2](https://github.com/xArm-Developer/xarm_ros2)
+
+```bash
+roslaunch lite6_moveit_config realMove_exec.launch robot_ip:=192.168.1.xxx
+```
+
+```bash
+openrr_apps_robot_teleop --config-path ./config/teleop_config_for_ros.toml
+```
