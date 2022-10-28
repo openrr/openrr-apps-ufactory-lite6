@@ -1,0 +1,11 @@
+robot_config_path = "robot_client_config_for_ros.toml"
+
+[control_nodes_config]
+
+[control_nodes_config.joints_pose_sender_config]
+
+[[control_nodes_config.joy_joint_teleop_configs]]
+client_name = "arm_collision_checked"
+
+[control_nodes_config.joy_joint_teleop_configs.config]
+mode = "lite6 "

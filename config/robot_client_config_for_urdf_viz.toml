@@ -1,0 +1,22 @@
+[[urdf_viz_clients_configs]]
+name = "lite6"
+joint_names = ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"]
+wrap_with_joint_position_limiter = true
+
+[openrr_clients_config]
+urdf_path = "../urdf/lite6_robot.urdf"
+self_collision_check_pairs = ["joint1:joint_eef"]
+
+[[openrr_clients_config.collision_check_clients_configs]]
+name = "arm_collision_checked"
+client_name = "lite6"
+
+[[openrr_clients_config.joints_poses]]
+pose_name = "zero"
+client_name = "arm_collision_checked"
+positions = [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+
+[[openrr_clients_config.joints_poses]]
+pose_name = "initial_pose"
+client_name = "arm_collision_checked"
+positions = [0.0, 0.35, 1.11, 0.0, 0.76, 0.0]
