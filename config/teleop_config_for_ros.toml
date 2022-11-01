@@ -9,3 +9,11 @@ client_name = "arm_collision_checked"
 
 [control_nodes_config.joy_joint_teleop_configs.config]
 mode = "lite6 "
+
+[[control_nodes_config.command_configs]]
+name = "stop servo"
+file_path = "../command/stop_servo.txt"
+
+[[control_nodes_config.command_configs]]
+name = "enable servo"
+file_path = "../command/enable_servo.txt"
