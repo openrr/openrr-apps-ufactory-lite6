@@ -1,0 +1,7 @@
+openrr_apps_robot_command execute_command -- rosservice call /ufactory/motion_ctrl 8 1
+
+openrr_apps_robot_command execute_command -- rosservice call /ufactory/set_mode 1
+
+openrr_apps_robot_command execute_command -- rosservice call /ufactory/set_state 0
+
+openrr_apps_robot_command speak Default "Initialization completed!"

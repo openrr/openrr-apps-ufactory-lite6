@@ -1,0 +1,1 @@
+openrr_apps_robot_command execute_command -- rosservice call /ufactory/motion_ctrl 8 0
