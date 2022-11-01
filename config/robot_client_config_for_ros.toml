@@ -6,7 +6,7 @@ controller_name = "/ufactory/lite6_traj_controller"
 state_topic_name = "/ufactory/lite6_traj_controller/state"
 
 [openrr_clients_config]
-urdf_path = "../urdf/lite6_robot.urdf"
+urdf_path = "../lite6_robot.urdf"
 self_collision_check_pairs = ["joint1:joint_eef"]
 
 [[openrr_clients_config.collision_check_clients_configs]]

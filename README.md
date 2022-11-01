@@ -4,6 +4,27 @@
 
 ## Installation
 
+### Install `ROS` package
+
+Please enable `ROS`
+
+```bash
+mkdir -p ~/xarm_ws/src
+cd ~/xarm_ws/src
+git clone https://github.com/xArm-Developer/xarm_ros
+cd xarm-ros
+git pull
+git submodule sync
+git submodule update --init --remote
+cd ~xarm_ws
+catkin_make
+```
+
+#### See also
+
+- [xarm_ros](https://github.com/xArm-Developer/xarm_ros)
+- [xarm_ros2](https://github.com/xArm-Developer/xarm_ros2)
+
 ### Install `urdf-viz`
 
 ```bash
@@ -14,6 +35,21 @@ cargo install urdf-viz
 
 ```bash
 cargo install --git https://github.com/openrr/openrr.git
+```
+
+### Setup URDF file
+
+Clone this repository.
+
+```bash
+git clone https://github.com/openrr/openrr-apps-ufactory-lite6
+cd openrr-apps-ufactory-lite6
+```
+
+Then create urdf file for `openrr-apps`.
+
+```bash
+xacro ~/xarm_ws/src/xarm_ros/xarm_description/urdf/lite6_robot.urdf.xacro > lite6_robot.urdf
 ```
 
 ## urdf-viz
@@ -43,11 +79,6 @@ openrr_apps_robot_teleop --config-path ./config/teleop_config_for_urdf_viz.toml
 ## ROS
 
 Run a real robot in `ROS`.
-
-### See also
-
-- [xarm_ros](https://github.com/xArm-Developer/xarm_ros)
-- [xarm_ros2](https://github.com/xArm-Developer/xarm_ros2)
 
 ```bash
 roslaunch lite6_moveit_config realMove_exec.launch robot_ip:=192.168.1.xxx
