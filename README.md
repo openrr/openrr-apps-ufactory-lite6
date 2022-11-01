@@ -59,7 +59,7 @@ Simulate on `urdf-viz`.
 ### openrr_apps_joint_position_sender
 
 ```bash
-urdf-viz ./urdf/lite6_robot/urdf &
+urdf-viz lite6_robot.urdf &
 ```
 
 ```bash
@@ -69,7 +69,7 @@ openrr_apps_joint_position_sender --config-path ./config/robot_client_config_for
 ### openrr_apps_robot_teleop
 
 ```bash
-urdf-viz ./urdf/lite6_robot/urdf &
+urdf-viz lite6_robot.urdf &
 ```
 
 ```bash
