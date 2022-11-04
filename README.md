@@ -81,3 +81,25 @@ roslaunch lite6_moveit_config realMove_exec.launch robot_ip:=192.168.1.xxx
 ```bash
 openrr_apps_robot_teleop --config-path ./config/teleop_config_for_ros.toml
 ```
+
+### ROS2
+
+#### Setup
+
+```bash
+ros2 launch xarm_moveit_config lite6_moveit_fake.launch.py
+```
+
+```bash
+ros2 param get /controller_manager robot_description > lite6_robot.urdf
+```
+
+#### Run
+
+```bash
+ros2 launch xarm_moveit_config lite6_moveit_realmove.launch.py robot_ip:=192.168.1.xxx
+```
+
+```bash
+openrr_apps_robot_teleop --config-path ./config/teleop_config_for_ros2.toml
+```

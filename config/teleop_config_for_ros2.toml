@@ -1,0 +1,17 @@
+robot_config_path = "robot_client_config_for_ros2.toml"
+
+[control_nodes_config]
+joints_pose_sender_config.mode = "pose"
+
+[[control_nodes_config.ik_node_teleop_configs]]
+solver_name = "arm_ik_solver"
+joint_trajectory_client_name = "lite6"
+
+[control_nodes_config.ik_node_teleop_configs.config]
+mode = "i k"
+
+[[control_nodes_config.joy_joint_teleop_configs]]
+client_name = "arm_collision_checked"
+
+[control_nodes_config.joy_joint_teleop_configs.config]
+mode = "lite6"
