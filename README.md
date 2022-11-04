@@ -46,12 +46,6 @@ git clone https://github.com/openrr/openrr-apps-ufactory-lite6
 cd openrr-apps-ufactory-lite6
 ```
 
-Then create urdf file for `openrr-apps`.
-
-```bash
-xacro ~/xarm_ws/src/xarm_ros/xarm_description/urdf/lite6_robot.urdf.xacro > lite6_robot.urdf
-```
-
 ## urdf-viz
 
 Simulate on `urdf-viz`.
@@ -59,7 +53,7 @@ Simulate on `urdf-viz`.
 ### openrr_apps_joint_position_sender
 
 ```bash
-urdf-viz lite6_robot.urdf &
+urdf-viz $(rospack find xarm_description)/urdf/lite6_robot.urdf.xacro &
 ```
 
 ```bash
@@ -69,7 +63,7 @@ openrr_apps_joint_position_sender --config-path ./config/robot_client_config_for
 ### openrr_apps_robot_teleop
 
 ```bash
-urdf-viz lite6_robot.urdf &
+urdf-viz $(rospack find xarm_description)/urdf/lite6_robot.urdf.xacro &
 ```
 
 ```bash
