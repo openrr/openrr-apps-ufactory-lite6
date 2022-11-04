@@ -1,4 +1,5 @@
 robot_config_path = "robot_client_config_for_ros.toml"
+initial_mode = "command"
 
 [control_nodes_config]
 
