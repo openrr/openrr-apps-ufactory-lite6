@@ -16,7 +16,7 @@ cd xarm-ros
 git pull
 git submodule sync
 git submodule update --init --remote
-cd ~xarm_ws
+cd ~/xarm_ws
 catkin_make
 ```
 
