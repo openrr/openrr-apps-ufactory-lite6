@@ -11,11 +11,7 @@ Please enable `ROS`
 ```bash
 mkdir -p ~/xarm_ws/src
 cd ~/xarm_ws/src
-git clone https://github.com/xArm-Developer/xarm_ros
-cd xarm-ros
-git pull
-git submodule sync
-git submodule update --init --remote
+git clone https://github.com/xArm-Developer/xarm_ros --recursive
 cd ~/xarm_ws
 catkin_make
 ```
